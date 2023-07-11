@@ -5,6 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cooking Landing Page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
@@ -20,6 +26,7 @@
         <img
           src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/089/299/original/jason-briscoe-7MAjXGUmaPw-unsplash.jpg?1689081480"
           alt="A wowan is cooking"
+          class="main-img"
         />
       </a>
       <div class="grid">
@@ -54,8 +61,11 @@
           own food, you control what you eat, you’ll know every ingredient
           added, which is a great way of improving your health and diet.
         </p>
-        <a href="https://hobbycents.com/hobby-guides/cooking-hobby-guide/"
-          >📖 Benefits of cooking as a hobby</a
+        <a
+          href="https://hobbycents.com/hobby-guides/cooking-hobby-guide/"
+          target="_blank"
+          rel="noopener noreffer nofollow"
+          >📖 Read benefits of cooking as a hobby</a
         >
       </div>
       <button id="order-button" class="order-button">
@@ -65,8 +75,13 @@
       <p>
         <small>
           Coded by 👩‍💻
-          <a href="https://www.shecodes.io" target="_blank">Hanna Tkach</a> with
-          HTML, CSS and JavaScript
+          <a
+            href="https://www.linkedin.com/in/hanna-tkach-31a32b277/"
+            target="_blank"
+            rel="noopener noreffer nofollow"
+            >Hanna Tkach</a
+          >
+          with HTML, CSS and JavaScript
         </small>
       </p>
     </div>
@@ -97,7 +112,7 @@
       button.addEventListener("click", order);
 
       let theme = "dark";
-      let themeButton = document.querySelector("#change-theme-button");
+      let themeButton = document.querySelector("#theme-button");
       themeButton.addEventListener("click", toggleTheme);
     </script>
   </body>
