@@ -7,5 +7,98 @@
     <title>Cooking Landing Page</title>
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body></body>
+  <body>
+    <button id="theme-button" class="theme-button">Change theme</button>
+    <div class="container">
+      <h1>🍳 How about cooking?</h1>
+      <h2>A highly creative hobby to take up</h2>
+      <a
+        href="https://hobbycents.com/hobby-guides/cooking-hobby-guide/"
+        target="_blank"
+        rel="noopener noreffer nofollow"
+      >
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/089/299/original/jason-briscoe-7MAjXGUmaPw-unsplash.jpg?1689081480"
+          alt="A wowan is cooking"
+        />
+      </a>
+      <div class="grid">
+        <img
+          class="picture-grid"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/089/300/original/joseph-gonzalez-fdlZBWIP0aM-unsplash.jpg?1689081536"
+          alt="Photo of food"
+        />
+        <img
+          class="picture-grid"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/089/297/original/chad-montano-lP5MCM6nZ5A-unsplash.jpg?1689081397"
+          alt="Photo of food"
+        />
+        <img
+          class="picture-grid"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/089/298/original/fathul-abrar-ZqREbckCRQA-unsplash.jpg?1689081435"
+          alt="Photo of food"
+        />
+        <img
+          class="picture-grid"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/089/296/original/chad-montano-eeqbbemH9-c-unsplash.jpg?1689081237"
+          alt="Photo of food"
+        />
+      </div>
+      <div class="description">
+        <p>
+          Many see cooking as a chore, but it can be great way to unwind and
+          relax from the stresses of life, and bond with the family. You can
+          create your own dishes, tweak well known recipes, blend your favourite
+          cuisines, your creative juices will be in full flow. Taking up cooking
+          as a hobby will help you lead a healthier lifestyle. When cooking your
+          own food, you control what you eat, you’ll know every ingredient
+          added, which is a great way of improving your health and diet.
+        </p>
+        <a href="https://hobbycents.com/hobby-guides/cooking-hobby-guide/"
+          >📖 Benefits of cooking as a hobby</a
+        >
+      </div>
+      <button id="order-button" class="order-button">
+        Get in touch for a cooking master class
+      </button>
+
+      <p>
+        <small>
+          Coded by 👩‍💻
+          <a href="https://www.shecodes.io" target="_blank">Hanna Tkach</a> with
+          HTML, CSS and JavaScript
+        </small>
+      </p>
+    </div>
+    <script>
+      function order() {
+        let cookingLevel = prompt(
+          "What are your cooking skills? Rate them from 0 to 10, with 10 being the highest rating.",
+          "0"
+        );
+        let name = prompt("What is your first name?");
+        let email = prompt("What is your email?");
+        alert(
+          "Thanks, " + name + "! We'll be in touch soon with more details."
+        );
+      }
+
+      function toggleTheme() {
+        if (theme === "light") {
+          theme = "dark";
+          document.querySelector("body").classList.add("dark");
+        } else {
+          theme = "light";
+          document.querySelector("body").classList.remove("dark");
+        }
+      }
+
+      let button = document.querySelector("#order-button");
+      button.addEventListener("click", order);
+
+      let theme = "dark";
+      let themeButton = document.querySelector("#change-theme-button");
+      themeButton.addEventListener("click", toggleTheme);
+    </script>
+  </body>
 </html>
